@@ -46,5 +46,5 @@ To build and run the PBFT implementation, follow these steps:
     ```shell
     cargo run --release
     ```
-
-![PBFT](https://drive.google.com/file/d/1q4NMMrsNGZJSEqXkwh9_noO7jZ6N0UQK/view?usp=sharing)
+## Work-Flow
+![N|Solid](https://github.com/varshney565/IMAGES/blob/main/hello.png)
