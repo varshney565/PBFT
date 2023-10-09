@@ -26,6 +26,7 @@ This project is an implementation of the Practical Byzantine Fault Tolerance (PB
     ```shell
     IP=xxx.xxx.xxx.xxx
     PORT=xxxx
+    NODES=xxx.xxx.xxx,yyy.yyy.yyy.yyy,zzz.zzz.zzz
     ```
 
 ## Installation

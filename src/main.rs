@@ -20,6 +20,16 @@ use std::env;
 
 use dotenv;
 
+fn read_nodes_from_env() -> Vec<String> {
+    match env::var("NODES") {
+        Ok(nodes_str) => nodes_str
+            .split(',') 
+            .map(|node| node.trim().to_string())
+            .collect(),
+        Err(_) => Vec::new(), 
+    }
+}
+
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     let environment = env::var("ENV").unwrap_or_else(|_| "dev".to_string());
@@ -27,11 +37,10 @@ async fn main() -> std::io::Result<()> {
         dotenv::from_filename("node.env").ok();
     }
     let port = env::var("PORT").expect("Failed to load the Port !!");
-    add_node("192.168.178.32:8081".to_string());
-    add_node("192.168.178.32:8080".to_string());
-    add_node("192.168.178.32:8082".to_string());
-    add_node("192.168.178.32:8083".to_string());
-    add_node("192.168.178.32:8084".to_string());
+    let ips = read_nodes_from_env();
+    for ip in ips {
+        add_node(ip);
+    }
     HttpServer::new(|| 
         App::new()
                 .route("/proposal", web::post().to(index))
