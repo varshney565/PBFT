@@ -19,6 +19,14 @@ This project is an implementation of the Practical Byzantine Fault Tolerance (PB
 - Rust (Stable)
 - Cargo (Rust's package manager)
 
+## Configuration
+ 
+Add a node.env file to the project which will have the the following fields
+
+    ```shell
+    IP=xxx.xxx.xxx.xxx
+    PORT=xxxx```
+
 ## Installation
 
 To build and run the PBFT implementation, follow these steps:
@@ -37,11 +45,3 @@ To build and run the PBFT implementation, follow these steps:
     ```shell
     cargo run --release
     ```
-
-## Configuration
- 
-Add a node.env file to the project which will have the the following fields
-
-    ```shell
-    IP=xxx.xxx.xxx.xxx
-    PORT=xxxx```
