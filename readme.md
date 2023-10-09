@@ -25,7 +25,8 @@ Add a node.env file to the project which will have the the following fields
 
     ```shell
     IP=xxx.xxx.xxx.xxx
-    PORT=xxxx```
+    PORT=xxxx
+    ```
 
 ## Installation
 
