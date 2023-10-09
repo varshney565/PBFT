@@ -35,7 +35,6 @@ To build and run the PBFT implementation, follow these steps:
 
    ```shell
    git clone https://github.com/varshney565/PBFT.git
-   cd pbft
     ```
 2. Build the project:
     ```shell
