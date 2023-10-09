@@ -21,7 +21,7 @@ This project is an implementation of the Practical Byzantine Fault Tolerance (PB
 
 ## Configuration
  
-Add a node.env file to the project which will have the the following fields
+1. Add a node.env file to the project which will have the the following fields
 
     ```shell
     IP=xxx.xxx.xxx.xxx
